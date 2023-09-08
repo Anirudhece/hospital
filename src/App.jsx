@@ -1,9 +1,16 @@
-import React from 'react'
-
+import React from "react";
+import Stepper from "./components/Stepper";
+import { Box } from "@mui/material";
 function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <Box sx={{ display: "flex", justifyContent: "center" , mt:20}}>
+        <Box sx={{ width: "80%" }}>
+          <Stepper />
+        </Box>
+      </Box>
+    </>
+  );
 }
 
-export default App
+export default App;
