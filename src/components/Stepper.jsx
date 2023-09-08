@@ -76,6 +76,7 @@ export default function HorizontalStepper() {
     return (
       <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
         <Button
+          variant="outlined"
           color="inherit"
           disabled={activeStep === 0}
           onClick={handleBack}
@@ -85,15 +86,17 @@ export default function HorizontalStepper() {
         </Button>
         <Box sx={{ flex: "1 1 auto" }} />
         {isStepOptional() && (
-          <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+          <Button color="secondary" onClick={handleSkip} sx={{ mr: 1 }}>
             Skip
           </Button>
         )}
 
         {activeStep === steps.length ? (
-          <Button onClick={handleReset}>Reset</Button>
+          <Button variant="contained" color="success" onClick={handleReset}>
+            Reset
+          </Button>
         ) : (
-          <Button onClick={handleNext}>
+          <Button variant="contained" onClick={handleNext}>
             {activeStep === steps.length - 1 ? "finish" : "Next"}
           </Button>
         )}
