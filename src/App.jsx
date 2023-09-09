@@ -8,7 +8,7 @@ function App() {
       <Box sx={{ display: "flex", justifyContent: "center",fontFamily: '"Nunito Sans", sans-serif', mt:25}}>
         <Box sx={{ width: "85%" }}>
           <Hero />
-          {/* <Stepper /> */}
+          <Stepper />
         </Box>
       </Box>
     </>
