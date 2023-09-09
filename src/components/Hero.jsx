@@ -12,7 +12,7 @@ function Hero() {
 
   return (
     <>
-      <Box>
+      <Box mb={15}>
         <Typography
           variant="h3"
           mb={5}
