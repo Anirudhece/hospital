@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Badge, IconButton, Tooltip } from "@mui/material";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
+
 function Navigation() {
   const TypeRoute = (text) => {
     return (
@@ -31,52 +32,67 @@ function Navigation() {
       </Typography>
     );
   };
+
   return (
     <>
-      <Box sx={{ display: "flex" }}>
-        <Box
-          ml={4}
-          mr={4}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <Box className="left" sx={{ display: "flex" }}>
-            <Box className="image" mr={3}>
-              <img
-                style={{ width: "40px" }}
-                src="https://www.dailyrounds.org/blog/wp-content/uploads/2015/05/caduceus.jpg"
-                alt="govt of HP"
-              />
+      <Box
+        component="nav"
+        sx={{
+          position: "sticky",
+          top: 0,
+          backgroundColor: "white",
+          zIndex: 999,
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Box sx={{ display: "flex" }}>
+          <Box
+            ml={4}
+            mr={4}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <Box
+              className="left"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              <Box className="image" mr={3}>
+                <img
+                  style={{ width: "40px" }}
+                  src="https://www.dailyrounds.org/blog/wp-content/uploads/2015/05/caduceus.jpg"
+                  alt="govt of HP"
+                />
+              </Box>
+              {TypeRoute("AIM")}
+              {TypeRoute("HOSPITALS")}
+              {TypeRoute("TECHNOLOGY")}
+              {TypeRoute("ABOUT US")}
+              {TypeRoute("CONTACT")}
             </Box>
-            {TypeRoute("AIM")}
-            {TypeRoute("HOSPITALS")}
-            {TypeRoute("TECHNOLOGY")}
-            {TypeRoute("ABOUT US")}
-            {TypeRoute("CONTACT")}
-          </Box>
-          <Box className="right" sx={{ display: "flex" }}>
-            <Box mr={3}>
-              <IconButton aria-label="login">
-                <Badge badgeContent={69} color="error">
-                  <Tooltip title="login/signup">
-                    <AccountCircleOutlinedIcon
-                      color="primary"
-                      fontSize="large"
-                    />
+            <Box className="right" sx={{ display: "flex" }}>
+              <Box mr={3}>
+                <IconButton aria-label="login">
+                  <Badge badgeContent={69} color="error">
+                    <Tooltip title="login/signup">
+                      <AccountCircleOutlinedIcon
+                        color="primary"
+                        fontSize="large"
+                      />
+                    </Tooltip>
+                  </Badge>
+                </IconButton>
+              </Box>
+              <Box>
+                <IconButton aria-label="contact">
+                  <Tooltip title="contact us">
+                    <CallOutlinedIcon color="error" fontSize="large" />
                   </Tooltip>
-                </Badge>
-              </IconButton>
-            </Box>
-            <Box>
-              <IconButton aria-label="contact">
-                <Tooltip title="contact us">
-                  <CallOutlinedIcon color="error" fontSize="large" />
-                </Tooltip>
-              </IconButton>
+                </IconButton>
+              </Box>
             </Box>
           </Box>
         </Box>
