@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Box,
+  Center,
   chakra,
   Container,
   Stack,
@@ -63,7 +64,7 @@ export default function SmallWithLogoLeft() {
           align={{ base: "center", md: "center" }}
         >
           <Logo />
-          <Text fontSize="lg">
+          <Text textAlign={'Center'} fontSize="lg">
             Made with ❤️ for government of <b>Himachal Pradesh</b> in{" "}
             <b>Bharat</b>{" "}
             <img
