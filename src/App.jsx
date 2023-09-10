@@ -7,28 +7,26 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Stats from "./components/Stats";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import Heading from "./components/Heading";
 function App() {
   return (
     <>
       <Navigation />
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
           fontFamily: '"Nunito Sans", sans-serif',
-          mt: 25,
+          mt:5,
         }}
       >
-        <Box sx={{}}>
+        <Box sx={{ width: "85%",ml:'auto',mr:'auto' }}>
           <Hero />
           <Stepper />
-          <ChakraProvider>
-            <Stats/>
-            <Contact />
-            <Footer />
-          </ChakraProvider>
         </Box>
+        <ChakraProvider>
+          <Stats />
+          <Contact />
+          <Footer />
+        </ChakraProvider>
       </Box>
     </>
   );

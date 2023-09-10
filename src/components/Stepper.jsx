@@ -74,7 +74,7 @@ export default function HorizontalStepper() {
 
   const renderButtons = () => {
     return (
-      <Box sx={{ display: "flex", flexDirection: "row", pt: 2,mb:5 }}>
+      <Box sx={{ display: "flex", flexDirection: "row", pt: 2, mb: 5 }}>
         <Button
           variant="outlined"
           color="inherit"
@@ -126,51 +126,52 @@ export default function HorizontalStepper() {
           );
         })}
       </Stepper>
-
-      {activeStep === 0 ? (
-        <>
-          <div>
+      <Box mt={10} mb={15} >
+        {activeStep === 0 ? (
+          <>
+            <div>
+              {renderText(
+                `The user will land and proceed to 🔑 log in or ✍️ sign up`
+              )}
+              {renderButtons()}
+            </div>
+          </>
+        ) : activeStep === 1 ? (
+          <>
+            <div>
+              {renderText(
+                `The user will create their profile by adding details such as their name, age, 📋 previous medical records, or gender`
+              )}
+              {renderButtons()}
+            </div>
+          </>
+        ) : activeStep === 2 ? (
+          <>
+            <div>
+              {renderText(
+                `The user can provide details about their symptoms, how long they have been feeling unwell, and any pre-existing conditions. 💊`
+              )}
+              {renderButtons()}
+            </div>
+          </>
+        ) : activeStep === 3 ? (
+          <>
+            <div>
+              {renderText(
+                `Voilà! 📅 Appointment is booked, and confirmation details will be dispatched from our end to user`
+              )}
+              {renderButtons()}
+            </div>
+          </>
+        ) : activeStep === steps.length ? (
+          <>
             {renderText(
-              `The user will land and proceed to 🔑 log in or ✍️ sign up`
+              `The details of the patient with potential disease, figured out by AI, ML, and Deep Learning🤖, will be relayed to the concerned medical 👩‍⚕️ staff at the targeted hospital 🏥.  `
             )}
             {renderButtons()}
-          </div>
-        </>
-      ) : activeStep === 1 ? (
-        <>
-          <div>
-            {renderText(
-              `The user will create their profile by adding details such as their name, age, 📋 previous medical records, or gender`
-            )}
-            {renderButtons()}
-          </div>
-        </>
-      ) : activeStep === 2 ? (
-        <>
-          <div>
-            {renderText(
-              `The user can provide details about their symptoms, how long they have been feeling unwell, and any pre-existing conditions. 💊`
-            )}
-            {renderButtons()}
-          </div>
-        </>
-      ) : activeStep === 3 ? (
-        <>
-          <div>
-            {renderText(
-              `Voilà! 📅 Appointment is booked, and confirmation details will be dispatched from our end to user`
-            )}
-            {renderButtons()}
-          </div>
-        </>
-      ) : activeStep === steps.length ? (
-        <>
-          {renderText(
-            `The details of the patient with potential disease, figured out by AI, ML, and Deep Learning🤖, will be relayed to the concerned medical 👩‍⚕️staff at the targeted hospital 🏥.  `
-          )}
-          {renderButtons()}
-        </>
-      ) : null}
+          </>
+        ) : null}
+      </Box>
     </Box>
   );
 }

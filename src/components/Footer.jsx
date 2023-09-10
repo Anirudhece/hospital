@@ -47,7 +47,7 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function SmallWithLogoLeft() {
   return (
-    <Box
+    <Box mt={200}
       marginTop="value"
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
