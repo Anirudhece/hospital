@@ -4,8 +4,9 @@ import { Box } from "@mui/material";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import { ChakraProvider } from "@chakra-ui/react";
-import Stats from './components/Stats'
+import Stats from "./components/Stats";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,12 +20,13 @@ function App() {
           mt: 25,
         }}
       >
-        <Box sx={{ }}>
-          {/* <Hero />
-          <Stepper /> */}
+        <Box sx={{}}>
+          <Hero />
+          <Stepper />
           <ChakraProvider>
-            {/* <Contact /> */}
             <Stats/>
+            <Contact />
+            <Footer />
           </ChakraProvider>
         </Box>
       </Box>
